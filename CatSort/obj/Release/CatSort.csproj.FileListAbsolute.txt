@@ -1,0 +1,5 @@
+C:\Users\user\source\repos\CatSort\CatSort\obj\Release\MainWindow.g.cs
+C:\Users\user\source\repos\CatSort\CatSort\obj\Release\App.g.cs
+C:\Users\user\source\repos\CatSort\CatSort\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\user\source\repos\CatSort\CatSort\obj\Release\CatSort_MarkupCompile.cache
+C:\Users\user\source\repos\CatSort\CatSort\obj\Release\CatSort_MarkupCompile.lref

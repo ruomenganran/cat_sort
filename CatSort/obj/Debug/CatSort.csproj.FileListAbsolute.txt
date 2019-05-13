@@ -1,0 +1,14 @@
+C:\Users\user\source\repos\CatSort\CatSort\bin\Debug\CatSort.exe
+C:\Users\user\source\repos\CatSort\CatSort\bin\Debug\CatSort.pdb
+C:\Users\user\source\repos\CatSort\CatSort\obj\Debug\CatSort.csprojResolveAssemblyReference.cache
+C:\Users\user\source\repos\CatSort\CatSort\obj\Debug\MainWindow.g.cs
+C:\Users\user\source\repos\CatSort\CatSort\obj\Debug\App.g.cs
+C:\Users\user\source\repos\CatSort\CatSort\obj\Debug\CatSort_MarkupCompile.cache
+C:\Users\user\source\repos\CatSort\CatSort\obj\Debug\CatSort_MarkupCompile.lref
+C:\Users\user\source\repos\CatSort\CatSort\obj\Debug\MainWindow.baml
+C:\Users\user\source\repos\CatSort\CatSort\obj\Debug\CatSort.g.resources
+C:\Users\user\source\repos\CatSort\CatSort\obj\Debug\CatSort.Properties.Resources.resources
+C:\Users\user\source\repos\CatSort\CatSort\obj\Debug\CatSort.csproj.GenerateResource.Cache
+C:\Users\user\source\repos\CatSort\CatSort\obj\Debug\CatSort.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\CatSort\CatSort\obj\Debug\CatSort.exe
+C:\Users\user\source\repos\CatSort\CatSort\obj\Debug\CatSort.pdb

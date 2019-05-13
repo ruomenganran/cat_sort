@@ -1,0 +1,135 @@
+﻿<Window x:Class="CatSort.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CatSort"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="421" Width="589"
+        
+        >
+    <Grid x:Name="Board" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+
+        <ProgressBar Name="dataProgress" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Margin="12,42,0,0" Width="221" ></ProgressBar>
+        <TextBox Name="dataLenFront" HorizontalAlignment="Left" Height="20" Margin="94,16,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="41" TextChanged="TextBox_TextChanged" TextAlignment="Center" PreviewTextInput="dataLenFront_PreviewTextInput" InputMethod.IsInputMethodEnabled="False" MaxLines="1" MaxLength="3"/>
+        <Button Content="Set" HorizontalAlignment="Left" Height="20" Margin="145,16,0,0" VerticalAlignment="Top" Width="55" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="12,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79"><Run Text="DataLength"/><Run Text=" "/><Run Text=":"/></TextBlock>
+        <CheckBox Name="windowChange" Content="Adaptive Window" Height="20" Margin="215,19,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TabControl Margin="12,70,12,12" Name="tabControl" SelectedIndex="0">
+            <TabItem Header="Static" Name="tabItemStatic">
+                <Grid Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                    <ScrollViewer x:Name="Scr" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="0,0,0,0">
+                        <UniformGrid x:Name="MainBoard" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Columns="7" Rows="1" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="520" Width="480" Height="250" MinHeight="250">
+                            <Grid x:Name="Board1" Background="#FFF0F0F0">
+                                <Canvas x:Name="Show1" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Margin="10">
+                                    <TextBlock x:Name="tbBubble" HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Canvas.Left="0" Canvas.Top="0" Text="BubbleSort"/>
+                                    <TextBlock x:Name="tbBubbleTime" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Canvas.Left="0" Canvas.Top="0" Text="0" HorizontalAlignment="Left" Margin="0,13,0,0"/>
+
+                                </Canvas>
+                            </Grid>
+                            <Grid x:Name="Board2" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                                <Canvas x:Name="Show2" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Margin="10">
+                                    <TextBlock x:Name="tbSelection" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Canvas.Left="0" Canvas.Top="0" Text="SelectionSort"/>
+                                    <TextBlock x:Name="tbSelectionTime" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Left="0" Canvas.Top="0" FontSize="10" Margin="0,13,0,0" Text="0"/>
+
+                                </Canvas>
+                            </Grid>
+                            <Grid x:Name="Board3" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                                <Canvas x:Name="Show3" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Margin="10">
+                                    <TextBlock x:Name="tbInsertion" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Left="0" FontSize="10" Canvas.Top="0" Text="InsertionSort"/>
+                                    <TextBlock x:Name="tbInsertionTime" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Left="0" Canvas.Top="0" FontSize="10" Margin="0,13,0,0" Text="0"/>
+
+                                </Canvas>
+                            </Grid>
+                            <Grid x:Name="Board4" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                                <Canvas x:Name="Show4" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Margin="10">
+                                    <TextBlock x:Name="tbShell" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Left="0" FontSize="10" Canvas.Top="0" Text="ShellSort"/>
+                                    <TextBlock x:Name="tbShellTime" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Left="0" Canvas.Top="0" FontSize="10" Margin="0,13,0,0" Text="0"/>
+
+                                </Canvas>
+                            </Grid>
+                            <Grid x:Name="Board5" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                                <Canvas x:Name="Show5" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Margin="10">
+                                    <TextBlock x:Name="tbMerge" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Left="0" FontSize="10" Canvas.Top="0"><Run Text="MergeSor"/><Run Text="t"/></TextBlock>
+                                    <TextBlock x:Name="tbMergeTime" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Left="0" Canvas.Top="0" FontSize="10" Margin="0,13,0,0" Text="0"/>
+
+                                </Canvas>
+                            </Grid>
+                            <Grid x:Name="Board6" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                                <Canvas x:Name="Show6" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Margin="10">
+                                    <TextBlock x:Name="tbHeap" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Top="0" FontSize="10" Canvas.Left="0" Text="HeapSort"/>
+                                    <TextBlock x:Name="tbHeapTime" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Left="0" Canvas.Top="0" FontSize="10" Margin="0,13,0,0" Text="0"/>
+
+                                </Canvas>
+                            </Grid>
+                            <Grid x:Name="Board7" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                                <Canvas x:Name="Show7" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Margin="10">
+                                    <TextBlock x:Name="tbQuick" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Left="0" FontSize="10" Canvas.Top="0" Text="QuickSort"/>
+                                    <TextBlock x:Name="tbQuickTime" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Left="0" Canvas.Top="0" FontSize="10" Margin="0,13,0,0" Text="0"/>
+
+                                </Canvas>
+                            </Grid>
+                        </UniformGrid>
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Dynamic" Name="tabItemDynamic">
+                <Grid Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                    <ScrollViewer x:Name="DScr" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="0,0,0,0">
+                        <UniformGrid x:Name="DMainBoard" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Columns="1" Rows="7" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="520" Width="480" Height="500" MinHeight="500">
+                            <Grid x:Name="DBoard1" Background="#FFF0F0F0">
+                                <Canvas x:Name="DShow1" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Margin="10">
+                                    <TextBlock x:Name="DtbBubble" HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Canvas.Left="0" Canvas.Top="0" Text="BubbleSort"/>
+                                    <TextBlock x:Name="DtbBubbleTime" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Canvas.Left="0" Canvas.Top="0" Text="0" HorizontalAlignment="Left" Margin="0,13,0,0"/>
+
+                                </Canvas>
+                            </Grid>
+                            <Grid x:Name="DBoard2" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                                <Canvas x:Name="DShow2" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Margin="10">
+                                    <TextBlock x:Name="DtbSelection" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" Canvas.Left="0" Canvas.Top="0" Text="SelectionSort"/>
+                                    <TextBlock x:Name="DtbSelectionTime" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Left="0" Canvas.Top="0" FontSize="10" Margin="0,13,0,0" Text="0"/>
+
+                                </Canvas>
+                            </Grid>
+                            <Grid x:Name="DBoard3" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                                <Canvas x:Name="DShow3" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Margin="10">
+                                    <TextBlock x:Name="DtbInsertion" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Left="0" FontSize="10" Canvas.Top="0" Text="InsertionSort"/>
+                                    <TextBlock x:Name="DtbInsertionTime" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Left="0" Canvas.Top="0" FontSize="10" Margin="0,13,0,0" Text="0"/>
+
+                                </Canvas>
+                            </Grid>
+                            <Grid x:Name="DBoard4" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                                <Canvas x:Name="DShow4" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Margin="10">
+                                    <TextBlock x:Name="DtbShell" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Left="0" FontSize="10" Canvas.Top="0" Text="ShellSort"/>
+                                    <TextBlock x:Name="DtbShellTime" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Left="0" Canvas.Top="0" FontSize="10" Margin="0,13,0,0" Text="0"/>
+
+                                </Canvas>
+                            </Grid>
+                            <Grid x:Name="DBoard5" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                                <Canvas x:Name="DShow5" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Margin="10">
+                                    <TextBlock x:Name="DtbMerge" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Left="0" FontSize="10" Canvas.Top="0"><Run Text="MergeSor"/><Run Text="t"/></TextBlock>
+                                    <TextBlock x:Name="DtbMergeTime" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Left="0" Canvas.Top="0" FontSize="10" Margin="0,13,0,0" Text="0"/>
+
+                                </Canvas>
+                            </Grid>
+                            <Grid x:Name="DBoard6" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                                <Canvas x:Name="DShow6" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Margin="10">
+                                    <TextBlock x:Name="DtbHeap" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Top="0" FontSize="10" Canvas.Left="0" Text="HeapSort"/>
+                                    <TextBlock x:Name="DtbHeapTime" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Left="0" Canvas.Top="0" FontSize="10" Margin="0,13,0,0" Text="0"/>
+
+                                </Canvas>
+                            </Grid>
+                            <Grid x:Name="DBoard7" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+                                <Canvas x:Name="DShow7" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Margin="10">
+                                    <TextBlock x:Name="DtbQuick" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Left="0" FontSize="10" Canvas.Top="0" Text="QuickSort"/>
+                                    <TextBlock x:Name="DtbQuickTime" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Canvas.Left="0" Canvas.Top="0" FontSize="10" Margin="0,13,0,0" Text="0"/>
+
+                                </Canvas>
+                            </Grid>
+                        </UniformGrid>
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
