@@ -4,8 +4,10 @@
 
 软件有两种演示方式 ：静态和动态。静态演示打印出排序算法每一次运算过程。
 ![imagine](img_folder/1.png)
+
 动态演示使用动画显示每一次排序运算。
 ![imagine](img_folder/3.png)
+
 
 ## 配置和功能
 DataLength: 输入演示数据数量，点击 "Set" 开始演示。
@@ -22,8 +24,10 @@ This is a small software that shows the sorting process of various sorting algor
 
 There are two mode in software to show sorting algorithms: Static and Dynamic. Static mode print every process of sorting algorithms.
 ![imagine](img_folder/1.png)
+
 Dynamic mode shows them by animation.
 ![imagine](img_folder/3.png)
+
 
 ## Settings and functions
 DataLength: Input quantity of data to sort, then press "Set" to show.
